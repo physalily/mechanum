@@ -9,8 +9,11 @@ private:
   double status_dats[4][3];
   double velocity[4];
 public:
+  //arg is size
   mechanum(double width, double length, double wheel_radius);
+  //arg is delta coordinates and angle
   void update(double X_coordinate,double Y_coordinate,double angle);
+  //output is angular velocity
   double output_0(){return velocity[0] / wheel_radius;}
   double output_1(){return velocity[1] / wheel_radius;}
   double output_2(){return velocity[2] / wheel_radius;}
