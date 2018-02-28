@@ -1,12 +1,9 @@
 class mechanum
 {
 private:
-  double width;
-  double length;
   double wheel_radius;
-
   double input_dats[3];
-  double status_dats[4][3];
+  double status_dats[3][4];
   double velocity[4];
 public:
   //arg is size
@@ -21,10 +18,7 @@ public:
 };
 
 inline mechanum::mechanum(double width, double length, double wheel_radius){
-  this -> width = width;
-  this -> length = length;
   this -> wheel_radius = wheel_radius;
-
   status_dats[0][0] = -1.0;
   status_dats[0][1] =  1.0;
   status_dats[0][2] = -1.0;
