@@ -11,10 +11,10 @@ public:
   //arg is delta coordinates and angle
   void update(double X_coordinate,double Y_coordinate,double angle);
   //output is angular velocity
-  double output_0(){return velocity[0] / wheel_radius;}
-  double output_1(){return velocity[1] / wheel_radius;}
-  double output_2(){return velocity[2] / wheel_radius;}
-  double output_3(){return velocity[3] / wheel_radius;}
+  double output_0(){return velocity[0] / wheel_radius;}//right front
+  double output_1(){return velocity[1] / wheel_radius;}//left front
+  double output_2(){return velocity[2] / wheel_radius;}//right rear
+  double output_3(){return velocity[3] / wheel_radius;}//left rear
 };
 
 inline mechanum::mechanum(double width, double length, double wheel_radius){
