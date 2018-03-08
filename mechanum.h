@@ -35,6 +35,7 @@ inline mechanum::mechanum(double width, double length, double wheel_radius){
 inline void mechanum::update(double X_coordinate,double Y_coordinate,double angle){
   input_dats[0] = X_coordinate;
   input_dats[1] = Y_coordinate;
+  input_dats[2] = angle;
   velocity[0] = status_dats[0][0] * input_dats[0] + status_dats[1][0] * input_dats[1] + status_dats[2][0] * input_dats[2];
   velocity[1] = status_dats[0][1] * input_dats[0] + status_dats[1][1] * input_dats[1] + status_dats[2][1] * input_dats[2];
   velocity[2] = status_dats[0][2] * input_dats[0] + status_dats[1][2] * input_dats[1] + status_dats[2][2] * input_dats[2];
