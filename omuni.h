@@ -22,12 +22,12 @@ inline omuni::omuni(double wheel_radius, double L, double Alpha){
   status_dats[0][0] = -sin(Alpha);
   status_dats[0][1] = -sin(Alpha + 2/3*M_PI);
   status_dats[0][2] = -sin(Alpha - 2/3*M_PI);
-  status_dats[1][0] = cos(Alpha);
-  status_dats[1][1] = cos(Alpha + 2/3*M_PI);
-  status_dats[1][2] = cos(Alpha - 2/3*M_PI);
-  status_dats[2][0] = L;
-  status_dats[2][1] = L;
-  status_dats[2][2] = L;
+  status_dats[1][0] =  cos(Alpha);
+  status_dats[1][1] =  cos(Alpha + 2/3*M_PI);
+  status_dats[1][2] =  cos(Alpha - 2/3*M_PI);
+  status_dats[2][0] =  L;
+  status_dats[2][1] =  L;
+  status_dats[2][2] =  L;
 }
 
 inline omuni::update(double X_coordinate, double Y_coordinate, double angle){
