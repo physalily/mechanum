@@ -12,7 +12,7 @@ public:
     input_dats[1] = Y_coordinate;
     input_dats[2] = Angle;
   }
-  double Velout_1}
+  double Velout_1(){}
   double Velout_2(){}
   double Velout_3(){}
   double Velout_4(){}
