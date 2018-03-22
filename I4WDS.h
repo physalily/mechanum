@@ -24,8 +24,8 @@ public:
   double Velout_3(){return sqrt(pow(input_dats[0] - R * input_dats * sin(cur_ang),2) + pow(input_dats[1] + R * input_dats[2] * cos(cur_ang)),2); }
   double Velout_4(){return sqrt(pow(input_dats[0] - R * input_dats * cos(cur_ang),2) + pow(input_dats[1] + R * input_dats[2] * sin(cur_ang)),2); }
 
-  double Angout_1(){return arctan((input_dats[1] + R * input_dats[2] * cos(cur_ang)) / (input_dats[0] - R * input_dats[2] * sin(cur_ang)));}
-  double Angout_2(){return arctan((input_dats[1] - R * input_dats[2] * sin(cur_ang)) / (input_dats[0] - R * input_dats[2] * cos(cur_ang)));}
-  double Angout_3(){return arctan((input_dats[1] - R * input_dats[2] * cos(cur_ang)) / (input_dats[0] + R * input_dats[2] * sin(cur_ang)));}
-  double Angout_4(){return arctan((input_dats[1] + R * input_dats[2] * sin(cur_ang)) / (input_dats[0] + R * input_dats[2] * cos(cur_ang)));}
+  double Angout_1(){return atan((input_dats[1] + R * input_dats[2] * cos(cur_ang)) / (input_dats[0] - R * input_dats[2] * sin(cur_ang))); }
+  double Angout_2(){return atan((input_dats[1] - R * input_dats[2] * sin(cur_ang)) / (input_dats[0] - R * input_dats[2] * cos(cur_ang))); }
+  double Angout_3(){return atan((input_dats[1] - R * input_dats[2] * cos(cur_ang)) / (input_dats[0] + R * input_dats[2] * sin(cur_ang))); }
+  double Angout_4(){return atan((input_dats[1] + R * input_dats[2] * sin(cur_ang)) / (input_dats[0] + R * input_dats[2] * cos(cur_ang))); }
 };
