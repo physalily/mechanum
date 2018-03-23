@@ -17,7 +17,6 @@ public:
     input_dats[0] = X_coordinate;
     input_dats[1] = Y_coordinate;
     input_dats[2] = Angle + cur_ang;
-    cur_ang += Angle;
   }
   double Velout_1(){return sqrt(pow(input_dats[0] - R * input_dats * sin(cur_ang),2) + pow(input_dats[1] + R * input_dats[2] * sin(cur_ang)),2); }
   double Velout_2(){return sqrt(pow(input_dats[0] - R * input_dats * cos(cur_ang),2) + pow(input_dats[1] - R * input_dats[2] * sin(cur_ang)),2); }
@@ -28,4 +27,5 @@ public:
   double Angout_2(){return atan((input_dats[1] - R * input_dats[2] * sin(cur_ang)) / (input_dats[0] - R * input_dats[2] * cos(cur_ang))); }
   double Angout_3(){return atan((input_dats[1] - R * input_dats[2] * cos(cur_ang)) / (input_dats[0] + R * input_dats[2] * sin(cur_ang))); }
   double Angout_4(){return atan((input_dats[1] + R * input_dats[2] * sin(cur_ang)) / (input_dats[0] + R * input_dats[2] * cos(cur_ang))); }
+  void ps(){cur_ang += Angle; }
 };
